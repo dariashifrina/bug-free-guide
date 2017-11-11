@@ -3,22 +3,23 @@
 
 <html>
   <head>
-    <title>NASA</title>
+    <title>LOL Champions</title>
     <link REL="STYLESHEET" TYPE="text/css" HREF="/templates/wow3.css"> 
   </head>
 
   <body>
     <div class="extreme"> 
       <div id="head1">
-	<center><h1>Cool Space!</h1>
+	<center><h1>League of Legends Champions:</h1>
       </div>
     </div>
     <div class="prose">
-      <h2>Below are some pretty cool spacial images rendered from a NASA API.</h2>
-	<h1>
-	  <img src="{{ dictionary }}">
-	  <img src="{{ d2 }}">
-	  </h1>
+      <h2>Below are champions and their titles.</h2>
+      <h3>
+      {% for champs, values in dictionary.iteritems() %}
+      {{ values["name"] }} : {{values["title"]}}<br>
+      {% endfor %}
+	  </h3>
       </div>
       <br>
       <br>
